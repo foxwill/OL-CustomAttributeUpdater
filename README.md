@@ -14,11 +14,12 @@ CSV: (should be available in default installation)
 Collections: (should be available in default installation)
 
 Usage:
-You MUST edit the script and change, at the minimum, two variables:
+You MUST edit the script and change, at the minimum, three variables:
 
 apikey - In your OneLogin account under Settings -> API, copy the API key that is available and paste it in between the quotes.
 
 custom_attribute - format should be custom_attribute_YOURATTRIBUTENAME
+custom_value - specify the value to be added to the user
 
 The script also looks for the file "user_details.csv".  You can change the name of your file to match this filename or change the filename in the script to match your file.
 

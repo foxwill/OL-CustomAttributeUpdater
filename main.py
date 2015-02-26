@@ -39,6 +39,7 @@ email = columns[0]
 # specify custom attribute that you wish to update. format should be custom_attribute_YOURATTRIBUTENAME
 ###
 custom_attribute = 'custom_attribute_Preferred_userid'
+custom_value = ''
 
 
 
@@ -63,7 +64,7 @@ def updateUser(userID):
 	# A successful post will result in a 200 OK message at which point we print a "Success" message.  If any http code other
 	# than 200 is returned we output it to the command line
 	###
-	payload = """<user><""" + custom_attribute + """>""" + preferredID + """</""" + custom_attribute + """></user>"""
+	payload = """<user><""" + custom_attribute + """>""" + custom_value + """</""" + custom_attribute + """></user>"""
 	r = requests.Session()
 	r.headers['Content-Type'] = 'text/xml'
 	x = r.put("https://app.onelogin.com/api/v3/users/" + userID + ".xml?api_key=" + apikey + "include_custom_attributes=true", data=payload)
